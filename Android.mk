@@ -9,7 +9,7 @@ LOCAL_MODULE         := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_SRC_FILES      := cameraHal.cpp
 
 LOCAL_SHARED_LIBRARIES := liblog libdl libutils libcamera_client libbinder libcutils libhardware libcamera
-LOCAL_C_INCLUDES       := frameworks/base/services/ frameworks/base/include
+LOCAL_C_INCLUDES       := $(TARGET_SPECIFIC_HEADER_PATH) frameworks/base/services/ frameworks/base/include
 LOCAL_C_INCLUDES       += hardware/libhardware/include/ hardware/libhardware/modules/gralloc/
 
 include $(BUILD_SHARED_LIBRARY)
